@@ -132,6 +132,25 @@ TEST DATA 1: [17, 21, 23]
 TEST DATA 2: [12, 5, -5, 0, 4]
 */
 
+const printForecast = function (arr) {
+  const temps = arr;
+  var str = '';
+
+  for (let index = 0; index < temps.length; index++) {
+    const currTemp = temps[index];
+    const days = index + 1;
+    str = str + '... ' + currTemp + 'ºC in ' + days + ' days ';
+  }
+
+  str = str + '...';
+
+  console.log(str);
+};
+
+const forcast = printForecast([17, 21, 23]);
+
+const forcast2 = printForecast([12, 5, -5, 0, 4]);
+
 /*
 // 1) Understanding the problem
 // - Array transformed to string, separated by ...
@@ -158,4 +177,3 @@ const printForecast = function (arr) {
 };
 printForecast(data1);
 */
-
